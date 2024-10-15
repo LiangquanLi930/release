@@ -180,9 +180,9 @@ echo "$(date) Creating HyperShift guest cluster ${CLUSTER_NAME}"
   --infra-availability-policy "${INFRA_AVAILABILITY}" \
   --service-cidr 172.32.0.0/16 \
   --cluster-cidr 10.136.0.0/14 \
-  --render-sensitive --render  > /tmp/hc-manifests/cluster-agent.yaml
+  --render-sensitive --render  > /tmp/cluster.yaml
 
-cat /tmp/hc-manifests/cluster-agent.yaml
+cat /tmp/cluster.yaml
 sleep 3600
 
 if [[ -n ${MCE} ]] ; then
